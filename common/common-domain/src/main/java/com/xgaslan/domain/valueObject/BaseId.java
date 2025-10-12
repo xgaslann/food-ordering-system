@@ -3,6 +3,7 @@ package com.xgaslan.domain.valueObject;
 import java.util.Objects;
 
 public abstract class BaseId<T> {
+
     private final T value;
 
     protected BaseId(T value) {
