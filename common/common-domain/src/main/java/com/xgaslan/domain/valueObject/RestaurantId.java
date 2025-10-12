@@ -1,4 +1,4 @@
-package com.xgaslan.system.domain.valueObject;
+package com.xgaslan.domain.valueObject;
 
 import java.util.UUID;
 

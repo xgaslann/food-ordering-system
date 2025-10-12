@@ -1,4 +1,4 @@
-package com.xgaslan.system.domain.entity;
+package com.xgaslan.domain.entity;
 
 import java.util.Objects;
 
