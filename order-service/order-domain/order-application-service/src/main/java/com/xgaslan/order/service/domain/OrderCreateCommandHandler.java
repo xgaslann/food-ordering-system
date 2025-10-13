@@ -11,7 +11,6 @@ import com.xgaslan.order.service.domain.mapper.OrderDataMapper;
 import com.xgaslan.order.service.domain.ports.output.repository.CustomerRepository;
 import com.xgaslan.order.service.domain.ports.output.repository.OrderRepository;
 import com.xgaslan.order.service.domain.ports.output.repository.RestaurantRepository;
-import jakarta.validation.constraints.NotNull;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Component;
 import org.springframework.transaction.annotation.Transactional;
