@@ -13,10 +13,10 @@ import java.util.UUID;
 @AllArgsConstructor
 public class CreateOrderResponse {
     @NotNull
-    private final UUID trackingId;
+    private final UUID orderTrackingId;
 
     @NotNull
-    private final OrderStatus status;
+    private final OrderStatus orderStatus;
 
     @NotNull
     private final String message;
