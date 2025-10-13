@@ -8,6 +8,7 @@ import com.xgaslan.order.service.domain.dto.create.CreateOrderCommand;
 import com.xgaslan.order.service.domain.dto.create.CreateOrderResponse;
 import com.xgaslan.order.service.domain.dto.create.OrderAddress;
 import com.xgaslan.order.service.domain.dto.create.OrderItemDto;
+import com.xgaslan.order.service.domain.dto.track.TrackOrderResponse;
 import com.xgaslan.order.service.domain.entity.Order;
 import com.xgaslan.order.service.domain.entity.OrderItem;
 import com.xgaslan.order.service.domain.entity.Product;
@@ -45,6 +46,14 @@ public class OrderDataMapper {
                 .orderTrackingId(order.getTrackingId().getValue())
                 .orderStatus(order.getOrderStatus())
                 .message("Order created successfully")
+                .build();
+    }
+
+    public TrackOrderResponse orderToTrackOrderResponse(Order order){
+        return TrackOrderResponse.builder()
+                .orderTrackingId(order.getTrackingId().getValue())
+                .orderStatus(order.getOrderStatus())
+                .failureMessages(order.getFailureMessages())
                 .build();
     }
 
