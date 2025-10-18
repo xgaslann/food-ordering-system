@@ -1,5 +1,6 @@
 package com.xgaslan.order.service.domain;
 
+import com.xgaslan.domain.valueObject.ProductId;
 import com.xgaslan.order.service.domain.entity.Order;
 import com.xgaslan.order.service.domain.entity.Product;
 import com.xgaslan.order.service.domain.entity.Restaurant;
@@ -65,16 +66,16 @@ public class OrderDomainServiceImpl implements OrderDomainService {
     }
 
     private void setOrderProductInformation(Order order, Restaurant restaurant) {
-        Map<Product, Product> productMap = restaurant.getProducts()
+        Map<ProductId, Product> productMap = restaurant.getProducts()
                 .stream()
                 .collect(Collectors.toMap(
-                        product -> product,
+                        Product::getId,
                         product -> product
                 ));
 
         order.getItems().forEach(orderItem -> {
             Product currentProduct = orderItem.getProduct();
-            Product restaurantProduct = productMap.get(currentProduct);
+            Product restaurantProduct = productMap.get(currentProduct.getId());
 
             if (restaurantProduct != null) {
                 currentProduct.updateWithConfirmedNameAndPrice(
