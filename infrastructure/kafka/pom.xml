@@ -11,7 +11,6 @@
 
     <artifactId>kafka</artifactId>
     <packaging>pom</packaging>
-
     <modules>
         <module>kafka-producer</module>
         <module>kafka-consumer</module>
@@ -63,5 +62,4 @@
             </dependency>
         </dependencies>
     </dependencyManagement>
-
 </project>
