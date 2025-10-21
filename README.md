@@ -27,3 +27,9 @@ after that we can run init script to create topics and produce/consume messages:
 ```
  docker compose -f common.yml -f init_kafka.yml up   
 ```
+
+To generate avro classes in kafka-module in path run that command
+
+```
+mvn clean install
+```
